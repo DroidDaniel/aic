@@ -1,4 +1,4 @@
-.Navbar {
+.navbar {
     padding: 40px 25px;
     height: 60px;
     display: flex;
@@ -7,30 +7,30 @@
     background-color: #550000;
 }
 
-.Navbar .nav-items{
+.navbar .nav-items{
     display: flex;
     align-items: center;
 }
 
-.Navbar>.nav-items>a {
+.navbar>.nav-items>a {
     color: #ffffff;
     font-size: 14px;
     text-decoration: none;
-    margin: 40px 15px 0 15px;
+    margin: 40px 25px 0 25px;
     padding: 10px 0;
     position: relative;
     opacity: 0.9;
 }
 
-.Navbar>.nav-items>a:hover {
+.navbar>.nav-items>a:hover {
     color: #eaa80f;
 }
 
-.Navbar>.nav-items>a:hover {
+.navbar>.nav-items>a:hover {
     opacity: 1;
 }
 
-.Navbar>.nav-items>a::before {
+.navbar>.nav-items>a::before {
     content: "";
     position: absolute;
     left: 0;
@@ -41,11 +41,11 @@
     transition: all 0.45s;
 }
 
-.Navbar>.nav-items>a:hover::before{
+.navbar>.nav-items>a:hover::before{
     width: 100%;
 }
 
-.Navbar>.nav-toggle{
+.navbar>.nav-toggle{
     display: none;
 }
 
@@ -74,12 +74,12 @@
         z-index: 1;
     }
 
-    .Navbar{
+    .navbar{
         justify-content: space-between;
         padding: 50px 25px;
     }
     
-    .Navbar>.nav-items {
+    .navbar>.nav-items {
         position: absolute;
         top: 0;
         display: flex;
@@ -91,20 +91,22 @@
         height: 100%;
         transform: translateX(-100%);
         transition: all .45s;
+        overflow-x: hidden;
+        overflow-y: auto;
     }
 
-    .Navbar>.nav-items>a {
+    .navbar>.nav-items>a {
         margin: 10px;
         font-size: 14px;
     }
-    .Navbar>.nav-items>a::before {
+    .navbar>.nav-items>a::before {
         background-color: transparent;
     }
 
-    .Navbar>.nav-items.open {
+    .navbar>.nav-items.open {
         transform: translateX(0);
     }
-    .Navbar>.nav-toggle {
+    .navbar>.nav-toggle {
         display: flex;
         width: 50px;
         height: 50px;

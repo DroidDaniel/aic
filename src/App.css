@@ -6,32 +6,21 @@
  }
 
  body {
-    width: 100%;
-    height: 100%;
     background-color: #730000;
     font-family: 'Rubik', sans-serif;
  }
 
- a {
-   text-decoration: none;
-   color: #fff; 
-  }
- h1,h2,h3,h4,h5,h6,span{
-    font-size: 18px;
-    color: #fff;
-    font-family: Poppins, sans-serif;
+ .aic__common_container{
+   width: 100%;
+   max-width: 1000px;
+   margin: 0 auto;
  }
 
- li {
-    overflow: hidden;
- }
-
- p {
-    font-size: 16px;
-    font-family: Poppins, sans-serif;
- }
-
- .container {
-    width: 80%;
-    margin: 0px auto;
+ .aic__common_title{
+   font-size: 24px;
+   line-height: 1.2;
+   font-weight: 700;
+   text-align: center;
+   padding: 20px 0;
+   color: #fff;
  }

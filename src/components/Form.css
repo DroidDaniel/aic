@@ -1,0 +1,91 @@
+.joinsection{
+    padding: 30px 0;
+    background-image: url("../images/join-big.png");
+    background-repeat: no-repeat;
+    background-position: 0 100px;
+    background-size: cover;
+}
+
+.form_field_set{
+    display: flex;
+}
+
+@media screen and (max-width:600px) {
+    .form_field_set{
+        flex-direction: column;
+    }
+}
+
+.form__wrapper{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form__field{
+    width: 100%;
+}
+
+@media screen and (max-width:600px) {
+.form__field{
+     display: flex;
+     justify-content: center;
+    }
+}
+
+.form__field input{
+    width: 90%;
+    padding: 15px 5px;
+    margin: 10px;
+    background-color: #e6cebb;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.form__field-tex_tarea textarea{
+    width: 95%;
+    margin: 10px;
+    background-color: #e6cebb;
+    border: none;
+    padding: 10px 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+@media screen and (max-width:600px) {
+    .form__field-tex_tarea textarea{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .form__field-tex_tarea{
+         display: flex;
+         justify-content: center;
+        }
+    }
+
+.form__field_btn{
+    text-align: center;
+}
+
+.btn__submit{
+    padding: 10px 25px;
+    margin: 10px 0;
+    background-color: #730000;
+    transition: all .3s ease;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.btn__submit:hover{
+    background-color: #e6cebb;
+    color: #730000;
+}
+

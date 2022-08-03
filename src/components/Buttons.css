@@ -1,0 +1,37 @@
+.button__wrapper{
+    display: flex;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.aic__btn{
+    padding: 15px 25px;
+    border-radius: 30px;
+    box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.192);
+    border: none;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.btn__join{
+    background-color: #aa0503;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.btn__join:hover{
+    background-color: #e6cebb;
+    color: #aa0503;
+}
+
+.btn__share{
+    background-color: #e6cebb;
+    color: #aa0503;
+}
+
+.btn__share:hover{
+    background-color: #aa0503;
+    color: #fff;
+}
