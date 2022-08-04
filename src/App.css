@@ -25,3 +25,16 @@
    padding: 20px 0;
    color: #fff;
  }
+
+ .banner__mb{
+  display: none;
+}
+
+@media screen and (max-width:600px) {
+  .banner__dktp{
+      display: none;
+  }
+  .banner__mb{
+      display: block;
+  } 
+}

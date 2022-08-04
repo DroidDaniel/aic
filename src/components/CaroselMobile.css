@@ -1,0 +1,41 @@
+.banner_container-mb .slick-dots {
+    left: -37px;
+    bottom: 50px;
+}
+
+.banner_container-mb .slick-dots li{
+    display: inline-block;
+}
+
+
+.banner_container-mb .slick-next{
+    right: -25px;
+    transform: rotate(90deg);
+}
+
+.banner_container-mb .slick-prev{
+    left: -15px;
+    transform: rotate(90deg);
+}
+
+.banner_container-mb .slick-next:before {
+    content: url("../images/up-arrow.png");
+}
+.banner_container-mb .slick-prev:before {
+    content: url("../images/down-wrrow.png");
+}
+   
+
+.banner_container-mb .slick-dots li.slick-active{
+    border: solid 1px #fff;
+    border-radius: 100%;
+}
+
+.banner_container-mb .slick-dots li.slick-active button:before{
+    color: #fff;
+    opacity: 1;
+}
+
+.banner_container-mb .slick-dots li button:before{
+    color: #fff;
+}
