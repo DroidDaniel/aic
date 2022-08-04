@@ -93,6 +93,7 @@
         transition: all .45s;
         overflow-x: hidden;
         overflow-y: auto;
+        z-index: 1;
     }
 
     .navbar>.nav-items>a {
@@ -113,6 +114,7 @@
         align-items: center;
         justify-content: center;
         cursor: pointer;
+        z-index: 2;
     }
    .nav-toggle>.bar {
     position: relative;
