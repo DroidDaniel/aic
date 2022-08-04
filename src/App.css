@@ -12,8 +12,9 @@
 
  .aic__common_container{
    width: 100%;
-   max-width: 1000px;
+   max-width: 1060px;
    margin: 0 auto;
+   padding: 0 30px;
  }
 
  .aic__common_title{
