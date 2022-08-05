@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "../../node_modules/slick-carousel/slick/slick.css";
 import "../../node_modules/slick-carousel/slick/slick-theme.css";
 import Bannermb1 from "../images/banner-mb-1.png";
+import JoinRevolution from "./JoinRevolution";
 
 function CaroselMobile() {
   const settings = {
@@ -22,6 +23,7 @@ function CaroselMobile() {
           slidesToShow: 1,
           slidesToScroll: 1,
           vertical: false,
+          swipeToSlide: true,
         },
       },
     ],
@@ -32,17 +34,21 @@ function CaroselMobile() {
       <div className="banner_container-mb">
         <div className="aic__common_container">
           <Slider {...settings}>
-            <div>
+            <div className="banner__slider">
               <img src={Bannermb1} alt="banner" />
+              <JoinRevolution />
             </div>
-            <div>
+            <div className="banner__slider">
               <img src={Bannermb1} alt="banner" />
+              <JoinRevolution />
             </div>
-            <div>
+            <div className="banner__slider">
               <img src={Bannermb1} alt="banner" />
+              <JoinRevolution />
             </div>
-            <div>
+            <div className="banner__slider">
               <img src={Bannermb1} alt="banner" />
+              <JoinRevolution />
             </div>
           </Slider>
         </div>

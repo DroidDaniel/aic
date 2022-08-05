@@ -30,12 +30,6 @@
     padding: 15px;
 }
 
-@media screen and (max-width:992px) {
-  .crisis__card{
-     display: flex;
-     justify-content: center;
-   }   
-}
 
 .crisis__card_img{
     width: 200px;
@@ -101,4 +95,27 @@ transition: all .3s ease;
 .crisis__card_img:hover .crisis__card_title{
     background-color: #e6cfbdb6;
     padding: 10px 0;
+}
+
+
+@media screen and (max-width:640px) {
+    .story_carousel .slick-next{
+        right: 20px;
+    }
+    .story_carousel .slick-prev{
+        left: 20px;
+    }    
+}
+
+@media screen and (max-width:992px) {
+    .story_carousel .slick-next{
+        right: -12px;
+    }
+    .story_carousel .slick-prev{
+        left: -12px;
+    }    
+}
+
+.story_carousel .slick-prev:before, .slick-next:before{
+    color: #730000;
 }

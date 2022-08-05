@@ -1,6 +1,7 @@
 import React from "react";
 import "./Crisis.css";
 import crisis from "../images/crisis.png";
+import StoryCarousel from "./StoryCarousel";
 
 function Crisis() {
   return (
@@ -17,7 +18,8 @@ function Crisis() {
           We cannot let this happen to our Andhra, we can not let this happen to
           our motherland.
         </p>
-        <div className="crisis__card_wrapper">
+        <StoryCarousel />
+        {/* <div className="crisis__card_wrapper">
           <div className="crisis__card">
             <div className="crisis__card_img scam">
               <div className="crisis__card_title">
@@ -46,7 +48,7 @@ function Crisis() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

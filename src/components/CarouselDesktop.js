@@ -7,6 +7,7 @@ import Banner1 from "../images/banner1.png";
 import Banner2 from "../images/banner2.png";
 import Banner3 from "../images/banner3.png";
 import Banner4 from "../images/banner4.png";
+import JoinRevolution from "./JoinRevolution";
 
 function CarouselDesktop() {
   const settings = {
@@ -25,6 +26,7 @@ function CarouselDesktop() {
           slidesToShow: 1,
           slidesToScroll: 1,
           vertical: false,
+          swipeToSlide: true,
         },
       },
     ],
@@ -35,17 +37,21 @@ function CarouselDesktop() {
       <div className="banner_container">
         <div className="aic__common_container">
           <Slider {...settings}>
-            <div>
+            <div className="banner__slider">
               <img src={Banner1} alt="banner" />
+              <JoinRevolution />
             </div>
-            <div>
+            <div className="banner__slider">
               <img src={Banner2} alt="banner" />
+              <JoinRevolution />
             </div>
-            <div>
+            <div className="banner__slider">
               <img src={Banner3} alt="banner" />
+              <JoinRevolution />
             </div>
-            <div>
+            <div className="banner__slider">
               <img src={Banner4} alt="banner" />
+              <JoinRevolution />
             </div>
           </Slider>
         </div>

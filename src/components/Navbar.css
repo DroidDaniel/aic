@@ -12,8 +12,15 @@
     align-items: center;
 }
 
+@media screen and (max-width:600px) {
+    .navbar .nav-items{
+        align-items: flex-start;
+        padding-left: 40px;
+    } 
+}
+
 .navbar>.nav-items>a {
-    color: #ffffff;
+    color: #ead4c0;
     font-size: 14px;
     text-decoration: none;
     margin: 40px 25px 0 25px;
@@ -62,9 +69,20 @@
     display: none;
   }
 
+  .navicon{
+    display: none;
+  }
 
 @media (max-width: 992px) {
-    
+    .navicon{
+        display: block;
+    }
+
+    .nav__link{
+        display: flex;
+        align-items: center;
+    } 
+
     .logo_dktp{
         display: none;
     }
@@ -166,3 +184,8 @@
       }
 }
  
+
+.navicon_img{
+    max-width: 26px;
+    margin-right: 10px;
+}

@@ -37,3 +37,7 @@
 .banner_container .slick-dots li button:before{
     color: #fff;
 }
+
+.banner__slider{
+    position: relative;
+}

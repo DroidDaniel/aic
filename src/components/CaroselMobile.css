@@ -13,9 +13,19 @@
     transform: rotate(90deg);
 }
 
+
 .banner_container-mb .slick-prev{
     left: -15px;
     transform: rotate(90deg);
+}
+
+@media screen and (max-width:600px) {
+    .banner_container-mb .slick-next{
+        right: -10px;
+    }
+    .banner_container-mb .slick-prev{
+        left:-10px;
+    }
 }
 
 .banner_container-mb .slick-next:before {
@@ -38,4 +48,9 @@
 
 .banner_container-mb .slick-dots li button:before{
     color: #fff;
+}
+
+.banner_container-mb .slick-slide{
+  display: flex;
+  justify-content: center;
 }
