@@ -11,18 +11,33 @@ function Form() {
   });
   const { name, email, city, phone, message } = data;
 
-  const handleChange = (e) =>
+  const handleChange = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await fetch("nocode-endpoint?tabId=Sheet1", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify([[name, email, city, phone, message]]),
+      const response = await fetch(
+        "https://v1.nocodeapi.com/danieldisowsa/google_sheets/BkUQyviigJTDWxoX?tabId=Sheet1",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify([
+            [new Date().toLocaleString(), name, email, city, phone, message],
+          ]),
+        }
+      );
+      await response.json();
+      setData({
+        ...data,
+        name: "",
+        email: "",
+        city: "",
+        phone: "",
+        message: "",
       });
     } catch (err) {
       console.log(err);
