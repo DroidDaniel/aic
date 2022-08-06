@@ -17,10 +17,11 @@ function Form() {
 
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
+  const [thankMessage, setThankMessage] = useState("");
 
   useEffect(() => {
     if (Object.keys(formErrors).length === 0 && isSubmit) {
-      console.log(data);
+      console.log("Success");
     }
   }, [formErrors]);
 
@@ -48,7 +49,7 @@ function Form() {
     e.preventDefault();
     setFormErrors(validate(data));
     setIsSubmit(true);
-    if (Object.keys(formErrors).length === 0 && isSubmit) {
+    if (name && email && city && phone) {
       try {
         const response = await fetch(
           "https://v1.nocodeapi.com/danieldisowsa/google_sheets/BkUQyviigJTDWxoX?tabId=Sheet1",
@@ -71,11 +72,12 @@ function Form() {
           phone: "",
           message: "",
         });
+        setThankMessage("Thankyou We have Recieved Your Data...");
       } catch (err) {
         console.log(err);
       }
     } else {
-      console.log("Hello");
+      console.log("error");
     }
   };
   return (
@@ -143,6 +145,7 @@ function Form() {
           </form>
         </div>
       </div>
+      <p className="success__message">{thankMessage}</p>
     </section>
   );
 }
