@@ -1,7 +1,9 @@
 .crisissection{
     padding: 30px 0;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url("../images/crisis.png"),url("../images/crisis.png");
+    background-size: 2000px 480px;
+    background-position: left bottom, right center;
 }
 
 .crisis__title{

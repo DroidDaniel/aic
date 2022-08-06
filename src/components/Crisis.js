@@ -1,17 +1,10 @@
 import React from "react";
 import "./Crisis.css";
-import crisis from "../images/crisis.png";
 import StoryCarousel from "./StoryCarousel";
 
 function Crisis() {
   return (
-    <section
-      className="crisissection"
-      id="aiccrisis"
-      style={{
-        backgroundImage: `url(${crisis})`,
-      }}
-    >
+    <section className="crisissection" id="aiccrisis">
       <div className="aic__common_container">
         <h6 className="aic__common_title crisis__title">CRISIS</h6>
         <p className="crisis__sub_title">

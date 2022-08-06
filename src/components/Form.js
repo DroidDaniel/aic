@@ -20,7 +20,7 @@ function Form() {
 
   useEffect(() => {
     if (Object.keys(formErrors).length === 0 && isSubmit) {
-      //console.log(data);
+      console.log(data);
     }
   }, [formErrors]);
 
@@ -49,8 +49,6 @@ function Form() {
     setFormErrors(validate(data));
     setIsSubmit(true);
     if (Object.keys(formErrors).length === 0 && isSubmit) {
-      console.log("Hello");
-    } else {
       try {
         const response = await fetch(
           "https://v1.nocodeapi.com/danieldisowsa/google_sheets/BkUQyviigJTDWxoX?tabId=Sheet1",
@@ -76,6 +74,8 @@ function Form() {
       } catch (err) {
         console.log(err);
       }
+    } else {
+      console.log("Hello");
     }
   };
   return (
