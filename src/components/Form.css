@@ -23,6 +23,7 @@
 
 .form__field{
     width: 100%;
+    position: relative;
 }
 
 @media screen and (max-width:600px) {
@@ -89,3 +90,11 @@
     color: #730000;
 }
 
+.form__fielderror_message{
+    font-size: 13px;
+    position: absolute;
+    left: 10px;
+    color: #f3aa00;
+    padding: 2px 5px;
+    bottom: -9px;
+}

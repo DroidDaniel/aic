@@ -1,6 +1,9 @@
 import React from "react";
 import "./Statistics.css";
 import Buttons from "./Buttons";
+import CrimeCounter from "./Counters/CrimeCounter";
+import FormerCounter from "./Counters/FormerCounter";
+import StudentsCounter from "./Counters/StudentsCounter";
 
 function Statistics() {
   return (
@@ -9,7 +12,9 @@ function Statistics() {
         <div className="amount__wrapper">
           <div className="amount__detail">
             <div className="amount__money">
-              <p className="amount__money_value numbers_value">1028</p>
+              <p className="amount__money_value numbers_value">
+                <FormerCounter />
+              </p>
             </div>
             <div className="amount__title">
               <p className="amount__title_name numbers_title amount__title_name-extra-margin">
@@ -19,7 +24,9 @@ function Statistics() {
           </div>
           <div className="amount__detail">
             <div className="amount__money">
-              <p className="amount__money_value numbers_value">857</p>
+              <p className="amount__money_value numbers_value">
+                <CrimeCounter />
+              </p>
             </div>
             <div className="amount__title">
               <p className="amount__title_name numbers_title">
@@ -29,7 +36,9 @@ function Statistics() {
           </div>
           <div className="amount__detail">
             <div className="amount__money">
-              <p className="amount__money_value numbers_value">26</p>
+              <p className="amount__money_value numbers_value">
+                <StudentsCounter />
+              </p>
             </div>
             <div className="amount__title">
               <p className="amount__title_name numbers_title amount__title_name-extra-margin">

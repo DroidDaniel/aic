@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Form.css";
 
 function Form() {
@@ -15,32 +15,69 @@ function Form() {
     setData({ ...data, [e.target.name]: e.target.value });
   };
 
+  const [formErrors, setFormErrors] = useState({});
+  const [isSubmit, setIsSubmit] = useState(false);
+
+  useEffect(() => {
+    console.log(formErrors);
+    if (Object.keys(formErrors).length === 0 && isSubmit) {
+      console.log(data);
+    }
+  }, [formErrors]);
+
+  const validate = (values) => {
+    const errors = {};
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+    if (!values.name) {
+      errors.name = "Username is required!";
+    }
+    if (!values.email) {
+      errors.email = "Email is required!";
+    } else if (!regex.test(values.email)) {
+      errors.email = "This is not a valid email format!";
+    }
+    if (!values.city) {
+      errors.city = "City is required";
+    }
+    if (!values.phone) {
+      errors.phone = "Phone is required";
+    }
+    return errors;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const response = await fetch(
-        "https://v1.nocodeapi.com/danieldisowsa/google_sheets/BkUQyviigJTDWxoX?tabId=Sheet1",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify([
-            [new Date().toLocaleString(), name, email, city, phone, message],
-          ]),
-        }
-      );
-      await response.json();
-      setData({
-        ...data,
-        name: "",
-        email: "",
-        city: "",
-        phone: "",
-        message: "",
-      });
-    } catch (err) {
-      console.log(err);
+    setFormErrors(validate(data));
+    setIsSubmit(true);
+    if (Object.keys(formErrors).length === 0 && isSubmit) {
+      console.log("Hello");
+      try {
+        const response = await fetch(
+          "https://v1.nocodeapi.com/danieldisowsa/google_sheets/BkUQyviigJTDWxoX?tabId=Sheet1",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify([
+              [new Date().toLocaleString(), name, email, city, phone, message],
+            ]),
+          }
+        );
+        await response.json();
+        setData({
+          ...data,
+          name: "",
+          email: "",
+          city: "",
+          phone: "",
+          message: "",
+        });
+      } catch (err) {
+        console.log(err);
+      }
+    } else {
+      console.log("error");
     }
   };
   return (
@@ -58,6 +95,7 @@ function Form() {
                   value={name}
                   onChange={handleChange}
                 />
+                <p className="form__fielderror_message">{formErrors.name}</p>
               </div>
               <div className="form__field">
                 <input
@@ -67,6 +105,7 @@ function Form() {
                   value={email}
                   onChange={handleChange}
                 />
+                <p className="form__fielderror_message">{formErrors.email}</p>
               </div>
             </div>
             <div className="form_field_set">
@@ -78,6 +117,7 @@ function Form() {
                   value={city}
                   onChange={handleChange}
                 />
+                <p className="form__fielderror_message">{formErrors.city}</p>
               </div>
               <div className="form__field">
                 <input
@@ -87,6 +127,7 @@ function Form() {
                   value={phone}
                   onChange={handleChange}
                 />
+                <p className="form__fielderror_message">{formErrors.phone}</p>
               </div>
             </div>
             <div className="form__field-tex_tarea">

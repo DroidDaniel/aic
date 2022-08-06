@@ -1,5 +1,8 @@
 import React from "react";
 import "./Amount.css";
+import DeptCounter from "./Counters/DeptCounter";
+import LoanCounter from "./Counters/LoanCounter";
+import TotalDeptCounter from "./Counters/TotalDeptCounter";
 
 function Amount() {
   return (
@@ -15,7 +18,7 @@ function Amount() {
             </div>
             <div className="amount__money">
               <p className="amount__money_value numbers_value">
-                <span>&#x20b9;</span> 8.30
+                <DeptCounter />
               </p>
               <p className="amount__in_letter">Lakh Crores</p>
             </div>
@@ -28,7 +31,7 @@ function Amount() {
             </div>
             <div className="amount__money">
               <p className="amount__money_value numbers_value">
-                <span>&#x20b9;</span> 4390
+                <LoanCounter />
               </p>
               <p className="amount__in_letter">Crores</p>
             </div>
@@ -41,7 +44,7 @@ function Amount() {
             </div>
             <div className="amount__money">
               <p className="amount__money_value numbers_value">
-                <span>&#x20b9;</span> 5.75
+                <TotalDeptCounter />
               </p>
               <p className="amount__in_letter">Crores every hour</p>
             </div>

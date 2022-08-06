@@ -4,6 +4,9 @@ import Slider from "react-slick";
 import "../../node_modules/slick-carousel/slick/slick.css";
 import "../../node_modules/slick-carousel/slick/slick-theme.css";
 import Bannermb1 from "../images/banner-mb-1.png";
+import Bannermb2 from "../images/banner-mb-2.png";
+import Bannermb3 from "../images/banner-mb-3.png";
+import Bannermb4 from "../images/banner-mb-4.png";
 import JoinRevolution from "./JoinRevolution";
 
 function CaroselMobile() {
@@ -20,6 +23,7 @@ function CaroselMobile() {
       {
         breakpoint: 600,
         settings: {
+          dots: false,
           slidesToShow: 1,
           slidesToScroll: 1,
           vertical: false,
@@ -39,15 +43,15 @@ function CaroselMobile() {
               <JoinRevolution />
             </div>
             <div className="banner__slider">
-              <img src={Bannermb1} alt="banner" />
+              <img src={Bannermb2} alt="banner" />
               <JoinRevolution />
             </div>
             <div className="banner__slider">
-              <img src={Bannermb1} alt="banner" />
+              <img src={Bannermb3} alt="banner" />
               <JoinRevolution />
             </div>
             <div className="banner__slider">
-              <img src={Bannermb1} alt="banner" />
+              <img src={Bannermb4} alt="banner" />
               <JoinRevolution />
             </div>
           </Slider>
