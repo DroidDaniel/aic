@@ -15,7 +15,7 @@ function LoanCounter() {
       <CountUp
         start={0}
         end={4390}
-        duration={10}
+        duration={5}
         prefix="&#x20b9; "
         enableScrollSpy
       />

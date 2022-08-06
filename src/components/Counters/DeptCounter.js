@@ -15,7 +15,7 @@ function DeptCounter() {
       <CountUp
         start={0}
         end={8.3}
-        duration={10}
+        duration={5}
         separator=" "
         decimals={2}
         decimal="."

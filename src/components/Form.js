@@ -19,9 +19,8 @@ function Form() {
   const [isSubmit, setIsSubmit] = useState(false);
 
   useEffect(() => {
-    console.log(formErrors);
     if (Object.keys(formErrors).length === 0 && isSubmit) {
-      console.log(data);
+      //console.log(data);
     }
   }, [formErrors]);
 
@@ -37,10 +36,10 @@ function Form() {
       errors.email = "This is not a valid email format!";
     }
     if (!values.city) {
-      errors.city = "City is required";
+      errors.city = "City is required!";
     }
     if (!values.phone) {
-      errors.phone = "Phone is required";
+      errors.phone = "Phone is required!";
     }
     return errors;
   };
@@ -51,6 +50,7 @@ function Form() {
     setIsSubmit(true);
     if (Object.keys(formErrors).length === 0 && isSubmit) {
       console.log("Hello");
+    } else {
       try {
         const response = await fetch(
           "https://v1.nocodeapi.com/danieldisowsa/google_sheets/BkUQyviigJTDWxoX?tabId=Sheet1",
@@ -76,8 +76,6 @@ function Form() {
       } catch (err) {
         console.log(err);
       }
-    } else {
-      console.log("error");
     }
   };
   return (

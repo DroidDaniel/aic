@@ -15,7 +15,7 @@ function TotalDeptCounter() {
       <CountUp
         start={0}
         end={5.75}
-        duration={15}
+        duration={5}
         separator=" "
         decimals={2}
         decimal="."
