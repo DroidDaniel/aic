@@ -43,7 +43,7 @@ function Navbar() {
                   alt="company logo"
                 />
               </span>
-              campaigns
+              Campaigns
             </a>
             <a href="/" className="logo_dktp">
               <img className="logo" src={logo} alt="company logo" />
@@ -56,13 +56,13 @@ function Navbar() {
                   alt="company logo"
                 />
               </span>
-              share a story
+              Share a story
             </a>
             <a href="/contact" className="nav__link">
               <span className="navicon">
                 <img className="navicon_img" src={Joinnow} alt="company logo" />
               </span>
-              Join NOW
+              Join Now
             </a>
             <a href="/contact" className="nav__link">
               <span className="navicon">

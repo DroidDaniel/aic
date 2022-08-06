@@ -93,8 +93,9 @@ transition: all .3s ease;
 }
 
 .crisis__card_img:hover .crisis__card_title{
-    background-color: #e6cfbdb6;
+    background-color: #730000;
     padding: 10px 0;
+    color: #e6cebb;
 }
 
 
