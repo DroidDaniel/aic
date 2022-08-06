@@ -19,7 +19,7 @@ function Navbar() {
       <div className="navbar__wrapper">
         <div className="header navbar">
           <div className={`nav-items ${isOpen && "open"}`}>
-            <a href="/home" className="nav__link">
+            <a href="/" className="nav__link">
               <span className="navicon">
                 <img
                   className="navicon_img"
@@ -29,7 +29,7 @@ function Navbar() {
               </span>
               About us
             </a>
-            <a href="/about" className="nav__link">
+            <a href="/" className="nav__link">
               <span className="navicon">
                 <img className="navicon_img" src={Pledge} alt="company logo" />
               </span>
@@ -58,13 +58,13 @@ function Navbar() {
               </span>
               Share a story
             </a>
-            <a href="/contact" className="nav__link">
+            <a href="/" className="nav__link">
               <span className="navicon">
                 <img className="navicon_img" src={Joinnow} alt="company logo" />
               </span>
               Join Now
             </a>
-            <a href="/contact" className="nav__link">
+            <a href="/" className="nav__link">
               <span className="navicon">
                 <img
                   className="navicon_img"
