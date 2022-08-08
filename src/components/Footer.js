@@ -4,6 +4,7 @@ import Facebook from "../images/facebook.png";
 import Instagram from "../images/instagram.png";
 import Twitter from "../images/twitter.png";
 import Youtube from "../images/youtube.png";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -50,6 +51,9 @@ function Footer() {
                 >
                   <img src={Youtube} alt="facebook" />
                 </a>
+              </li>
+              <li>
+                <Link to="/aicjoiners">dashboard</Link>
               </li>
             </ul>
           </div>

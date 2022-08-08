@@ -8,14 +8,14 @@ import Dashboard from "./components/Dashboard";
 function App() {
   return (
     <div className="App">
-      <Navbar />
       <Router>
+        <Navbar />
         <Routes>
           <Route path="/" element={<AicCore />} />
           <Route path="/aicjoiners" element={<Dashboard />} />
         </Routes>
+        <Footer />
       </Router>
-      <Footer />
     </div>
   );
 }
