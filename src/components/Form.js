@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { dp } from "../firebaseConfig";
+import { addDoc, collection, Timestamp } from "firebase/firestore";
 import "./Form.css";
 
 function Form() {
@@ -8,6 +10,7 @@ function Form() {
     city: "",
     phone: "",
     message: "",
+    Date: Timestamp.now().toDate(),
   });
   const { name, email, city, phone, message } = data;
 
@@ -49,36 +52,27 @@ function Form() {
     e.preventDefault();
     setFormErrors(validate(data));
     setIsSubmit(true);
+    const articleRef = collection(dp, "Articles");
     if (name && email && city && phone) {
-      try {
-        const response = await fetch(
-          "https://v1.nocodeapi.com/danieldisowsa/google_sheets/BkUQyviigJTDWxoX?tabId=Sheet1",
-          {
-            method: "POST",
-            mode: "no-cors",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify([
-              [new Date().toLocaleString(), name, email, city, phone, message],
-            ]),
-          }
-        );
-        await response.json();
-        setData({
-          ...data,
-          name: "",
-          email: "",
-          city: "",
-          phone: "",
-          message: "",
-        });
-        setThankMessage("Thankyou We have Recieved Your Data...");
-      } catch (err) {
-        console.log(err);
-      }
+      addDoc(articleRef, {
+        name: data.name,
+        email: data.email,
+        city: data.city,
+        phone: data.phone,
+        message: data.message,
+        Date: Timestamp.now().toDate(),
+      });
+      setData({
+        ...data,
+        name: "",
+        email: "",
+        city: "",
+        phone: "",
+        message: "",
+      });
+      setThankMessage("Thankyou We have Recieved Your Data...");
     } else {
-      console.log("error");
+      setThankMessage("Please Enter Valid Data");
     }
   };
   return (
