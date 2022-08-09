@@ -4,6 +4,8 @@ import Facebook from "../images/facebook.png";
 import Instagram from "../images/instagram.png";
 import Twitter from "../images/twitter.png";
 import Youtube from "../images/youtube.png";
+import Login from "../images/login-ico.png";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -11,7 +13,11 @@ function Footer() {
       <div className="aic__common_container">
         <div className="footer__wrapper">
           <div className="footer__copywrite">
-            <p>Copyright@2022 APinCrisis. ALL Rights Reserved</p>
+            <p>
+              Copyright&#64;2022{" "}
+              <span className="footer__company_name_span">APinCrisis.</span> ALL
+              Rights Reserved
+            </p>
           </div>
           <div className="footer__socialmedia">
             <ul className="footer__socialmedia__ul">
@@ -50,6 +56,14 @@ function Footer() {
                 >
                   <img src={Youtube} alt="facebook" />
                 </a>
+              </li>
+              <li className="footer__socialmedia__ul__icons">
+                <Link
+                  to="/login"
+                  className="footer__socialmedia__ul__icons__links"
+                >
+                  <img src={Login} alt="facebook" />
+                </Link>
               </li>
             </ul>
           </div>

@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AicCore from "./AicCore";
 import Dashboard from "./components/Dashboard";
+import Login from "./components/Login";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
+          <Route path="/login" element={<Login />} />
           <Route path="/" element={<AicCore />} />
           <Route path="/aicjoiners" element={<Dashboard />} />
         </Routes>

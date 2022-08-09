@@ -2,6 +2,7 @@ import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import { dp } from "../firebaseConfig";
 import "./Dashboard.css";
+import BackToHome from "./BackToHome";
 
 function Dashboard() {
   const [articles, setArticles] = useState([]);
@@ -23,14 +24,18 @@ function Dashboard() {
     <section className="dhasboardsection">
       <div className="aic__common_container">
         <h6 className="aic__table_title">AIC JOINERS DETAIL</h6>
+
         <div className="search__box">
-          <input
-            type="text"
-            placeholder="Search City..."
-            onChange={(e) => {
-              setsearchTerm(e.target.value);
-            }}
-          />
+          <BackToHome content="Log Out" url="/login" />
+          <div className="search__field">
+            <input
+              type="text"
+              placeholder="Search City..."
+              onChange={(e) => {
+                setsearchTerm(e.target.value);
+              }}
+            />
+          </div>
         </div>
         <div className="aictable">
           <table className="table">
@@ -57,6 +62,7 @@ function Dashboard() {
                 .map(({ id, name, email, city, phone, message }) => (
                   <tr key={id} className="works_img_wrapper">
                     <td>{name}</td>
+
                     <td>
                       <a href={`mailto:${email}`} className="works_img_link">
                         {email}

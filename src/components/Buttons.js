@@ -1,12 +1,15 @@
 import React from "react";
+import { Link } from "react-scroll";
 import "./Buttons.css";
 
 function Buttons() {
   return (
-    <div className="aic__common_container">
+    <div className="aic__common_container" id="storybtn">
       <div className="button__wrapper">
         <div className="join">
-          <button className="aic__btn btn__join">JOIN NOW</button>
+          <Link to="aicjoin" spy={true} smooth={true}>
+            <button className="aic__btn btn__join">JOIN NOW</button>
+          </Link>
         </div>
         <div className="share">
           <button className="aic__btn btn__share">SHARE A STORY</button>

@@ -1,10 +1,15 @@
 .bannersection{
-    padding: 30px 0;
+    padding: 130px 0 30px 0;
 }
 
 .banner_container .slick-next{
     left: -25px;
-    top: 45%;
+    top: 43%;
+    box-shadow: 5px 8px 10px rgb(0 0 0 / 19%);
+}
+
+.banner_container .slick-prev{
+    box-shadow: 5px 8px 10px rgb(0 0 0 / 19%);
 }
 
 .banner_container .slick-next:before {

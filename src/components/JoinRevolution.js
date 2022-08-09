@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 import "./JoinRevolution.css";
 
 function JoinRevolution() {
@@ -6,9 +7,9 @@ function JoinRevolution() {
     <div>
       <div className="join_btn_wraapper">
         <button className="btn__join_revolution">
-          <a href="/" className="join__btn_link">
+          <Link to="aicjoin" spy={true} smooth={true}>
             JOIN THE REVOLUTION
-          </a>
+          </Link>
         </button>
       </div>
     </div>

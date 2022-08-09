@@ -49,6 +49,13 @@
     width: 30px;
     height: 30px;
     border-radius: 100%;
+    opacity: 0.8;
+    transition: all .2s ease;
+}
+
+
+.footer__socialmedia__ul__icons:hover{
+    opacity: 1;
 }
 
 .footer__socialmedia__ul__icons img{
@@ -63,4 +70,8 @@
    justify-content: center;
    padding: 7px;
    border-radius: 100%;
+}
+
+.footer__company_name_span{
+    color: #eda50c;
 }

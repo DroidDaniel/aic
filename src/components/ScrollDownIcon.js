@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 import "./ScrollDownIcon.css";
 
 function ScrollDownIcon() {
@@ -6,7 +7,9 @@ function ScrollDownIcon() {
     <div className="scrolldown_container">
       <div className="scrolldown_field">
         {/* <div className="mouse"></div> */}
-        <div className="scroll_down"></div>
+        <Link to="aicamount" spy={true} smooth={true}>
+          <div className="scroll_down"></div>
+        </Link>
         {/* <div className="arrow"></div> */}
       </div>
     </div>

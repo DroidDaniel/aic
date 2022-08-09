@@ -7,6 +7,7 @@ import Sharestory from "../images/sharestory.png";
 import Joinnow from "../images/joinnow.png";
 import Download from "../images/download.png";
 import Campaign from "../images/campaign.png";
+import { Link } from "react-scroll";
 
 function Navbar() {
   window.addEventListener("scroll", function () {
@@ -14,12 +15,25 @@ function Navbar() {
     header.classList.toggle("active", window.scrollY > 0);
   });
   const [isOpen, setIsOpen] = useState(false);
+
+  function handleMenu() {
+    setIsOpen(!isOpen);
+  }
+
   return (
     <section className="navbarsection" id="aicnavbar">
       <div className="navbar__wrapper">
         <div className="header navbar">
           <div className={`nav-items ${isOpen && "open"}`}>
-            <a href="/" className="nav__link">
+            <Link
+              className={`nav-toggle nav__link ${isOpen && "open"}`}
+              onClick={handleMenu}
+              activeClass="actived"
+              to="aicabout"
+              spy={true}
+              smooth={true}
+              offset={-70}
+            >
               <span className="navicon">
                 <img
                   className="navicon_img"
@@ -28,14 +42,14 @@ function Navbar() {
                 />
               </span>
               About us
-            </a>
-            <a href="/" className="nav__link">
+            </Link>
+            <Link className="nav__link" to="/">
               <span className="navicon">
                 <img className="navicon_img" src={Pledge} alt="company logo" />
               </span>
               Pledge
-            </a>
-            <a href="/" className="nav__link">
+            </Link>
+            <Link className="nav__link" to="/" spy={true} smooth={true}>
               <span className="navicon">
                 <img
                   className="navicon_img"
@@ -44,11 +58,19 @@ function Navbar() {
                 />
               </span>
               Campaigns
-            </a>
-            <a href="/" className="logo_dktp">
+            </Link>
+            <Link className="nav__link logo_dktp" to="/">
               <img className="logo" src={logo} alt="company logo" />
-            </a>
-            <a href="/" className="nav__link">
+            </Link>
+            <Link
+              activeClass="actived"
+              className={`nav-toggle nav__link ${isOpen && "open"}`}
+              onClick={handleMenu}
+              to="aiccrisis"
+              offset={-60}
+              spy={true}
+              smooth={true}
+            >
               <span className="navicon">
                 <img
                   className="navicon_img"
@@ -57,14 +79,22 @@ function Navbar() {
                 />
               </span>
               Share a story
-            </a>
-            <a href="/" className="nav__link">
+            </Link>
+            <Link
+              activeClass="actived"
+              className={`nav-toggle nav__link ${isOpen && "open"}`}
+              onClick={handleMenu}
+              to="aicjoin"
+              offset={-60}
+              spy={true}
+              smooth={true}
+            >
               <span className="navicon">
                 <img className="navicon_img" src={Joinnow} alt="company logo" />
               </span>
               Join Now
-            </a>
-            <a href="/" className="nav__link">
+            </Link>
+            <Link className="nav__link" to="/" spy={true} smooth={true}>
               <span className="navicon">
                 <img
                   className="navicon_img"
@@ -73,12 +103,14 @@ function Navbar() {
                 />
               </span>
               Downloads
-            </a>
+            </Link>
           </div>
-          <img className="logo logo__mb" src={logo} alt="company logo" />
+          <Link className="nav__link" to="/">
+            <img className="logo logo__mb" src={logo} alt="company logo" />
+          </Link>
           <div
             className={`nav-toggle ${isOpen && "open"}`}
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={handleMenu}
           >
             <div className="bar"></div>
           </div>

@@ -1,0 +1,22 @@
+.back__home{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    transition: .3s all ease;
+    opacity: 0.5;
+  }
+
+  @media screen and (max-width:480px) {
+    .backto_home{
+      font-size: 0;
+    }
+   }
+
+  .back__home span{
+    margin-right: 10px;
+  }
+
+  .back__home:hover{
+    opacity: 1;
+  }

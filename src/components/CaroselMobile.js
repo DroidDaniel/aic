@@ -17,8 +17,7 @@ function CaroselMobile() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    vertical: true,
-    verticalSwiping: true,
+    swipeToSlide: true,
     responsive: [
       {
         breakpoint: 600,
