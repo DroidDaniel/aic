@@ -4,7 +4,6 @@
     justify-content: center;
     flex-direction: column;
     gap: 20px;
-    height: 100vh;
     background-color: #f8f9fd;
   }
 
@@ -40,7 +39,7 @@
     background-color: white;
     padding: 2rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-top: 150px;
+    margin:150px 0 50px 0;
     position: relative;
   }
 
