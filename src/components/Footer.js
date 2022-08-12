@@ -31,7 +31,7 @@ function Footer() {
               <li className="footer__socialmedia__ul__icons">
                 <a
                   className="footer__socialmedia__ul__icons__links"
-                  href="/"
+                  href="https://www.instagram.com/apincrisis/"
                   target="_blank"
                   rel="socialmedia"
                 >
