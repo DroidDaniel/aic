@@ -145,7 +145,7 @@ function Navbar() {
               className={`nav-toggle nav__link ${isOpen && "open"}`}
               onClick={handleMenu}
               to="aicjoin"
-              offset={-60}
+              offset={180}
               spy={true}
               smooth={true}
             >
