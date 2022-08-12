@@ -1,0 +1,133 @@
+.crisis__title{
+    color: #730000;
+    padding-top: 70px;
+}
+
+.crisis__sub_title{
+    color: #730000;
+    font-size: 22px;
+    line-height: 1.2;
+    font-weight: 500;
+    text-align: center;
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 0 0 20px 0;
+    text-transform: uppercase;
+}
+.crisis__card_wrapper{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+
+.crisis__card_img{
+    width: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: 300px;
+    background-position: center center;
+    border-radius: 10px;
+    border: solid 5px #f1e3d9;
+    -webkit-box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.171);
+            box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.171);
+    position: relative;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+}
+
+.crisis__card_img:hover{
+    background-size: 350px;
+}
+
+.scam{
+    background-image: url(".././../images/scam.png");
+}
+
+.jobless{
+    background-image: url(".././../images/jobless.png");
+}
+
+.infra{
+    background-image: url(".././../images/infra.png");
+}
+
+.puplic{
+    background-image: url(".././../images/puplic.png");
+}
+
+.crisis__card_img::after{
+    content: ' ';
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: rgb(226,203,186);
+background: -o-linear-gradient(96deg, rgba(226,203,186,0.9472163865546218) 0%, rgba(255,255,255,0.2329306722689075) 65%);
+background: linear-gradient(354deg, rgba(226,203,186,0.9472163865546218) 0%, rgba(255,255,255,0.2329306722689075) 65%);
+-webkit-transition: all .3s ease;
+-o-transition: all .3s ease;
+transition: all .3s ease;
+
+}
+
+.crisis__card_img:hover::after{
+    opacity: 0;
+}
+
+.crisis__card_title{
+    color: #730000;
+    font-size: 14px;
+    line-height: 20px;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    background-color: transparent;
+    width: 100%;
+    text-align: center;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.crisis__card_img:hover .crisis__card_title{
+    background-color: #730000;
+    padding: 10px 0;
+    color: #e6cebb;
+}
+
+
+@media screen and (max-width:640px) {
+    .story_carousel .slick-next{
+        right: 20px;
+    }
+    .story_carousel .slick-prev{
+        left: 20px;
+    }    
+}
+
+@media screen and (max-width:992px) {
+    .story_carousel .slick-next{
+        right: -12px;
+    }
+    .story_carousel .slick-prev{
+        left: -12px;
+    }    
+}
+
+.story_carousel .slick-prev:before, .slick-next:before{
+    color: #730000;
+}

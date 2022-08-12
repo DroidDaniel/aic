@@ -1,0 +1,104 @@
+.footersection{
+    padding: 15px 0;
+}
+
+@media screen and (max-width:600px) {
+    .footersection{
+        padding: 30px 0;
+    } 
+ }
+
+.footer__copywrite p{
+    color: #fff;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.footer__wrapper{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+@media screen and (max-width:600px) {
+   .footer__wrapper{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    text-align: center;
+   } 
+}
+
+.footer__socialmedia__ul{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+@media screen and (max-width:600px) {
+    .footer__socialmedia__ul{
+      margin-bottom: 10px;
+    } 
+ }
+
+.footer__socialmedia__ul__icons{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    list-style-type: none;
+    background-color: #fff;
+    margin: 0 10px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    opacity: 0.8;
+    -webkit-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+
+.footer__socialmedia__ul__icons:hover{
+    opacity: 1;
+}
+
+.footer__socialmedia__ul__icons img{
+    width: 16px;
+}
+
+.footer__socialmedia__ul__icons__links{
+   text-decoration: none;
+   color: #fff;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
+   -webkit-box-pack: center;
+       -ms-flex-pack: center;
+           justify-content: center;
+   padding: 7px;
+   border-radius: 100%;
+}
+
+.footer__company_name_span{
+    color: #eda50c;
+}

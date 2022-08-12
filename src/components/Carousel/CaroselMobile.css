@@ -1,0 +1,64 @@
+.banner_container-mb .slick-dots {
+    left: 80px;
+    bottom: 10px;
+}
+
+.banner_container-mb .slick-dots li{
+    display: inline-block;
+}
+
+
+.banner_container-mb .slick-next{
+    right: -25px;
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+}
+
+
+.banner_container-mb .slick-prev{
+    left: -15px;
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+}
+
+@media screen and (max-width:600px) {
+    .banner_container-mb .slick-next{
+        right: -10px;
+    }
+    .banner_container-mb .slick-prev{
+        left:-10px;
+    }
+}
+
+.banner_container-mb .slick-next:before {
+    content: url(".././../images/up-arrow.png");
+}
+.banner_container-mb .slick-prev:before {
+    content: url(".././../images/down-wrrow.png");
+}
+   
+
+.banner_container-mb .slick-dots li.slick-active{
+    border: solid 1px #fff;
+    border-radius: 100%;
+}
+
+.banner_container-mb .slick-dots li.slick-active button:before{
+    color: #fff;
+    opacity: 1;
+}
+
+.banner_container-mb .slick-dots li button:before{
+    color: #fff;
+}
+
+.banner_container-mb .slick-slide{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
