@@ -13,14 +13,12 @@
     right: 0;
     bottom: 0;
     position: fixed;
-    z-index: -1;
-    opacity: 0;
+    display: none;
 }
 
 .active-modal .modal,
 .active-modal .overlay{
-    z-index: 1;
-    opacity: 1;
+    display: block;
 }
 
 .overlay {
@@ -28,7 +26,7 @@
 }
 .modal-content {
     position: absolute;
-    top: 70%; 
+    top: 50%; 
     left: 50%;
     transform: translate(-50%, -50%);
     line-height: 1.4;
@@ -42,9 +40,8 @@
 }
 
 .active-modal .modal-content{
-    top: 50%;
+    top: 60%;
     visibility: visible;
-    z-index: 2;
 }
 
 .close-modal {
