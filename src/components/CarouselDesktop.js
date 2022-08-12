@@ -33,7 +33,7 @@ function CarouselDesktop() {
   };
 
   return (
-    <section className="bannersection" id="aicbanner">
+    <section className="bannersection" id="aicbanner-dktp">
       <div className="banner_container">
         <div className="aic__common_container">
           <Slider {...settings}>

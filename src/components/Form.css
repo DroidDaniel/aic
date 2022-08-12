@@ -80,6 +80,7 @@
 @media screen and (max-width:600px) {
     .form__field-tex_tarea textarea{
         width: 90%;
+        height: 130px;
     }
 }
 

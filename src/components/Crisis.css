@@ -29,7 +29,7 @@
 }
 
 .crisis__card{
-    padding: 15px;
+    padding: 15px 0;
 }
 
 @media screen and (max-width:992px) {
@@ -103,4 +103,18 @@ transition: all .3s ease;
 .crisis__card_img:hover .crisis__card_title{
     background-color: #e6cfbdb6;
     padding: 10px 0;
+}
+
+.storycarousel_conatiner{
+    width: 100%;
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+@media screen and (max-width:600px) {
+    .storycarousel_conatiner{
+        max-width: 100%;
+        padding: 0;
+    }
 }

@@ -3,9 +3,6 @@ import "./Footer.css";
 import Facebook from "../images/facebook.png";
 import Instagram from "../images/instagram.png";
 import Twitter from "../images/twitter.png";
-import Youtube from "../images/youtube.png";
-import Login from "../images/login-ico.png";
-import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -24,8 +21,9 @@ function Footer() {
               <li className="footer__socialmedia__ul__icons">
                 <a
                   className="footer__socialmedia__ul__icons__links"
-                  href="/"
+                  href="https://www.facebook.com/APinCrisis"
                   target="_blank"
+                  rel="socialmedia"
                 >
                   <img src={Facebook} alt="facebook" />
                 </a>
@@ -35,35 +33,20 @@ function Footer() {
                   className="footer__socialmedia__ul__icons__links"
                   href="/"
                   target="_blank"
+                  rel="socialmedia"
                 >
                   <img src={Instagram} alt="facebook" />
                 </a>
               </li>
               <li className="footer__socialmedia__ul__icons">
                 <a
-                  href="/"
+                  href="https://twitter.com/APinCrisis"
                   target="_blank"
+                  rel="socialmedia"
                   className="footer__socialmedia__ul__icons__links"
                 >
                   <img src={Twitter} alt="facebook" />
                 </a>
-              </li>
-              <li className="footer__socialmedia__ul__icons">
-                <a
-                  href="/"
-                  target="_blank"
-                  className="footer__socialmedia__ul__icons__links"
-                >
-                  <img src={Youtube} alt="facebook" />
-                </a>
-              </li>
-              <li className="footer__socialmedia__ul__icons">
-                <Link
-                  to="/login"
-                  className="footer__socialmedia__ul__icons__links"
-                >
-                  <img src={Login} alt="facebook" />
-                </Link>
               </li>
             </ul>
           </div>

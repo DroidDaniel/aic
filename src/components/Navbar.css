@@ -11,7 +11,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #550000;
+    background: rgba(9,13,25,.5);
+    backdrop-filter: saturate(180%) blur(20px);
 }
 
 .navbar .nav-items{
@@ -103,6 +104,7 @@
     .navbar{
         justify-content: space-between;
         padding: 50px 25px;
+        padding: 30px 25px 50px 25px;
     }
     
     .navbar>.nav-items {
@@ -141,6 +143,7 @@
         justify-content: center;
         cursor: pointer;
         z-index: 2;
+        margin-top: 50px;
     }
    .nav-toggle>.bar {
     position: relative;
@@ -184,11 +187,12 @@
         transform: rotate(-45deg) translate(26px, 26px);
     }
       .logo {
-        width: 80px;
+        width: 100px;
         margin: 0;
       }
       .logo__mb{
         display: block;
+        margin-top: 50px;
       }
 }
  

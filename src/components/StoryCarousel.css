@@ -20,16 +20,12 @@
     justify-content: center;
 }
 
-.crisis__card{
-    padding: 15px;
-}
-
 
 .crisis__card_img{
     width: 200px;
     height: 200px;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 300px;
     background-position: center center;
     border-radius: 10px;
     border: solid 5px #f1e3d9;
@@ -38,6 +34,11 @@
     cursor: pointer;
     display: flex;
     justify-content: center;
+    transition: all .3s ease-in;
+}
+
+.crisis__card_img:hover{
+    background-size: 350px;
 }
 
 .scam{
@@ -113,3 +114,4 @@ transition: all .3s ease;
 .story_carousel .slick-prev:before, .slick-next:before{
     color: #730000;
 }
+

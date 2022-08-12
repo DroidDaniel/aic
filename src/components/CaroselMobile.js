@@ -18,6 +18,7 @@ function CaroselMobile() {
     slidesToShow: 1,
     slidesToScroll: 1,
     swipeToSlide: true,
+    pauseOnHover: true,
     responsive: [
       {
         breakpoint: 600,
@@ -33,7 +34,7 @@ function CaroselMobile() {
   };
 
   return (
-    <section className="bannersection" id="aicbanner">
+    <section className="bannersection" id="aicbanner-mb">
       <div className="banner_container-mb">
         <div className="aic__common_container">
           <Slider {...settings}>
