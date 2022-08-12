@@ -36,12 +36,16 @@
     max-width: 600px;
     min-width: 300px;
     transition: all .3s ease;
-    visibility: hidden;
 }
 
 .active-modal .modal-content{
     top: 60%;
-    visibility: visible;
+}
+
+@media screen and (max-width:600px) {
+    .active-modal .modal-content{
+        top: 50%;
+    }   
 }
 
 .close-modal {
